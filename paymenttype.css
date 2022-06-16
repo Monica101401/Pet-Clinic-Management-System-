@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 18, 2021, 8:25:53 PM
+    Author     : Radha
+*/
+
+.form-group{
+    width: 350px;
+    padding-left: 10px;
+}
+
+.row_style{
+    margin-top: 15px;
+ 
+}
+
+
+.container{
+    padding-left: 300px;
+    padding-right: 400px;
+    padding-top: 150px;
+    
+}
+
+.panel-default{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-color: darkblue;
+    height:300px;
+    width:350px;
+}
+
+.panel-heading
+{
+    padding-left: 25px;
+    padding-right: 50px;
+      
+}
+
+.form-group{
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 14px;
+   
+}
+.form-control{
+    padding-left: 5px;
+    padding-right: 30px;
+    
+   
+}
+
+.row_style {
+    padding-left: 100px;
+    padding-right: 50px;
+}
+.panel {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.btn-primary {
+    background-color: darkblue; 
+    border-color: darkblue;
+    color:#ffffff;
+    font-size: 18px;
+    width:63.33%;
+}
+
+.backimg1{
+    background: url(https://media.istockphoto.com/vectors/cute-vet-seamless-pattern-vector-id1296848705?k=20&m=1296848705&s=612x612&w=0&h=TsNb4wdiUbmpijmQ6L-cI50ryXCgDwZKidcoIVt9RJM=) ;
+    height:650px;
+}

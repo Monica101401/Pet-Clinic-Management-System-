@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Fix Appointment</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <!--jQuery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Latest compiled and minified JavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" text="text/css" href="appointment.css">
+    </head>
+    <body>
+        <div class="backimg">
+        <div class="header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="logo"><a href="http://localhost:8383/HTML5Application/welcome.html"><span class="glyphicon glyphicon-home">PetClinic</a></div>
+            </div>
+
+    </div>
+            <div class="content">
+        <div class="banner-image">
+        <div class="inner-banner-image">
+            <div class="banner-content">
+                <div class="container">
+                    <h2 style="color:#fff"><b>Fix Appointment</b></h2>
+
+                        <div class="panel-body"></div>
+                        <form>
+                            <div class="form-group">
+                                <label>OwnerName:</label>
+                                <input type="text" name="owner" class="form-control input-lg" id="owner" placeholder="OwnerName" autocomplete="off">
+                                <span id="Msg0"  style=" color: chartreuse;"></span><br>
+                                
+                                <label>Email:</label><input type="text"  name="Email" class="form-control input-lg" placeholder="Email" id="email">
+                                <span id="Msg1" style=" color: chartreuse;"></span><br>
+                                
+                                <label>PetName:</label><input type="text" name="PetName" class="form-control input-lg" placeholder="PetName" id="pname">
+                                <span id="Msg2" style=" color: chartreuse;"></span><br>
+                                
+                                <label>Pet Type:</label><br><br><div class="div3"><label><input type="radio" name="Pet Type" value="Dog">Dog</label></div>
+                                <div class="div1"><label><input type="radio" name="Pet Type" value="Others">Others</label></div>
+                                <div class="div2"><label><input type="radio" name="Pet Type" value="Cat">Cat</label></div><br>
+                                
+                                <label>Gender:</label><br><br><div class="div4"><label><input type="radio" name="Gender" value="Male">Male</label></div>
+                                <div class="div5"><label><input type="radio" name="Gender" value="Female">Female</label></div><br><br>
+                                
+                                <label>Contact:</label><input type="text"  name="Contact" class="form-control input-lg" placeholder="Contact" id="contact">
+                                <span id="Msg3" style=" color: chartreuse;"></span><br>
+                                
+                                <label>City:</label><input type="text" name="City" class="form-control input-lg" placeholder="City" id="city">
+                                <span id="Msg4" style=" color: chartreuse;"></span><br>
+                                
+                                <label>Address:</label><input type="text"  name="Address" class="form-control input-lg" placeholder="Address" id="address">
+                                <span id="Msg5" style=" color: chartreuse;"></span><br>
+
+                                Appointment For
+                                <select class="form-control">
+
+                                    <option>Nutrition Checkup</option>
+                                    <option>Health Checkup</option>
+                                    <option>Spa</option>
+                                </select><br>
+
+                                Choose Date:<br><input type="date"><br><br>
+                                Choose time:<br><input type="time"><br><br>
+                                <button id="submit2" type="Fix Appointment" name="Fix Appointment" class="btn btn-primary btn-block">Fix Appointment</button><br><br>
+                        </form>
+                </div>
+        </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+        <script src="script.js">
+            
+        </script>
+        
+         </body>
+</html>

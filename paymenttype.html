@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <html>
+    <head>
+        <title>Payment Type</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <!--jQuery library--> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Latest compiled and minified JavaScript--> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    
+    <link rel="stylesheet"  href="paymenttype.css">
+    </head>
+    <body>
+        <div class="backimg1">
+        <div class="container">
+            <div class="row row_style">
+                <div class="col-xs-6" >
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <h4><p style= "color:darkblue;"><b>SELECT YOUR PAYMENT TYPE</b></p></h4>
+                        </div>
+                         
+                        <form>
+                            <div class="form-group"  id="redirect">
+                                <br><label><input type="radio" onclick="redirect()"  name="payment" value="upi">Upi</label><br><br>
+                                <label><input type="radio" onclick="redirect()" name="payment" value="credit">Credit Card</label><br><br>
+                                <label><input type="radio" onclick="redirect()" name="payment" value="debit">Debit Card</label><br><br>
+                                
+                                
+                        </form>      
+                </div>
+            </div>
+         </div>
+         </div>
+        </div>
+            <script>
+                
+                function redirect(){
+                    
+                    var slt = $('input[name=payment]:checked','#redirect').val();
+                    if(slt === "upi"){
+                        event.preventDefault();
+                        window.open('http://localhost:8383/HTML5Application/Upi.html','_self');   
+                    }
+                    else if(slt === "credit"){
+                        event.preventDefault();  
+                        window.open('http://localhost:8383/HTML5Application/payment.html','_self');   
+                    }
+                    else if(slt === "debit"){
+                        event.preventDefault();
+                        window.open('http://localhost:8383/HTML5Application/payment.html','_self');
+                    }
+                }
+            
+                redirect();
+                alert('Make your payemnt for the appointment');
+                </script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 18, 2021, 8:25:53 PM
+    Author     : Radha
+*/
+
+.form-group{
+    width: 350px;
+    padding-left: 10px;
+}
+
+.row_style{
+    margin-top: 15px;
+ 
+}
+
+
+.container{
+    padding-left: 200px;
+    padding-right: 400px;
+    
+}
+
+.panel-default{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-color: firebrick;
+    height:750px;
+    width:500px;
+}
+
+.panel-heading
+{
+    padding-left: 25px;
+    padding-right: 50px;
+      
+}
+
+.form-group{
+    padding-left: 50px;
+    padding-right: 25px;
+    font-size: 14px;
+   
+}
+.form-control{
+    padding-left: 5px;
+    padding-right: 50px;
+    border-color:firebrick;
+   
+}
+
+.row_style {
+    padding-left: 100px;
+    padding-right: 50px;
+}
+.panel {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.btn-primary{
+    background-color: firebrick; 
+    border-color: firebrick;
+    color:#ffffff;
+    font-size: 18px;
+    
+    
+}
+.thumbnail{
+display: block;
+ max-width: 80px;
+ height: 60px;
+ 
+}
+
+.div1{
+    float:right;
+    width:23.33%;
+}
+.div2{
+    float:left;
+    width:23.33%;
+}
+.div3{
+    margin: 0 auto;
+    width:23.33%;
+}

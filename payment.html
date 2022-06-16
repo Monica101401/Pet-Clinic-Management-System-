@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+            <head>
+	<title>Payment</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!--jQuery library-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!--Latest compiled and minified JavaScript-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" text="text/css" href="payment.css">
+</head>
+<body>
+<div class="container">
+	<div class="row row_style">
+		<div class="col-xs-6">
+			<div class="panel panel-default">
+				<div class="panel-heading text-center">
+					<h4><p style=" color: firebrick;"><cardHolderName>MAKE PAYMENT</cardHolderName></p></h4>
+				</div>
+
+				<form>
+					<div class="form-group">
+						<label>Amount:</label>
+						<input onkeyup="noletter(this)" type="text" class="form-control input-lg" name="amount" id="amount" placeholder="Amount">
+						<span id="Message0" class="text-danger font-weight-bold"></span>
+						<br>
+
+						<label>Email:</label>
+						<input type="text" class="form-control input-lg" name="email" id="email" placeholder="Email">
+						<span id="Message1" class="text-danger font-weight-bold"></span>
+						<br>
+
+						<label>Card Holdername:</label>
+						<input type="text" class="form-control input-lg" name="cardholdername" id="cardholdersname"
+						       placeholder="Card Holdername" onkeyup="letters(this)">
+						<span id="Message2" class="text-danger font-weight-bold"></span>
+                                                <br>
+						<label>Card Number:</label>
+						<input type="text" class="form-control input-lg" name="cardnumber" placeholder="Card Number" id="cardnumber"
+						       onkeyup="noletter(this)">
+						<span id="Message3" class="text-danger font-weight-bold"></span>
+                                                <br>
+                                                
+                                                <label>Expiration Date:</label>
+						<div class="selection">
+							<div class="date">
+								<select name="user" id="months">
+									<option value="Jan">Jan</option>
+									<option value="Feb">Feb</option>
+									<option value="Mar">Mar</option>
+									<option value="Apr">Apr</option>
+									<option value="May">May</option>
+									<option value="Jun">Jun</option>
+									<option value="Jul">Jul</option>
+									<option value="Aug">Aug</option>
+									<option value="Sep">Sep</option>
+									<option value="Oct">Oct</option>
+									<option value="Nov">Nov</option>
+									<option value="Dec">Dec</option>
+								</select>
+								<select name="years" id="years">
+									<option value="2021">2021</option>
+									<option value="2022">2022</option>
+									<option value="2023">2023</option>
+									<option value="2024">2024</option>
+									<option value="2025">2025</option>
+									<option value="2026">2026</option>
+								</select></div>
+						</div>
+						<br>
+
+						<label>CV Code:</label>
+						<input type="text" class="form-control input-lg" name="CVCode" id="cvcode" placeholder="CV Code"
+						       onkeyup="noletter(this)">
+						<span id="Message4" class="text-danger font-weight-bold"></span>
+                                                <br><br>
+
+						<div class="div1"><img
+										src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/1200px-Visa.svg.png"
+										alt="visa" class="thumbnail"></div>
+						<div class="div2"><img
+										src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2019/08/rupay-card-1566468196.jpg"
+										alt="rupay" class="thumbnail"></div>
+						<div class="div3"><img
+										src="https://d28wu8o6itv89t.cloudfront.net/images/mastercardlogopng-1579603310730.png"
+										alt="mastercard" class="thumbnail"></div>
+					</div>
+					<br>
+					<button id="submitForm" type="submit" name="submit" value="submit" class="btn btn-primary btn-block">Make
+						Payment
+					</button>
+					<br><br>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="sample.js"></script>
+<script>
+
+	$('#submitForm').click((event) => {
+		event.preventDefault();
+		const email = document.getElementById('email').value;
+		const cardHolderName = document.getElementById('cardholdersname').value;
+		const cardNumber = document.getElementById('cardnumber').value;
+		const cvCode = document.getElementById('cvcode').value;
+		const amount = document.getElementById('amount').value;
+
+		let amountValid = true;
+		let emailValid = true;
+		let cardHolderNameValid = true;
+		let cardNumberValid = true;
+		let cvCodeValid = true;
+
+		if (amount=== '') {
+			document.getElementById('Message0').innerHTML = 'Please fill the amount field';
+			amountValid = false;
+			return false;
+		}
+		if (email === '') {
+			document.getElementById('Message1').innerHTML = 'Please fill the email field'
+			emailValid = false;
+			return false;
+		}
+                
+		if (cardHolderName === '') {
+			document.getElementById('Message2').innerHTML = 'Please fill the cardholdername field'
+			cardHolderNameValid = false
+			return false
+		}
+		if (cardNumber === '') {
+			document.getElementById('Message3').innerHTML = 'Please fill the cardnumber field';
+			cardNumberValid=false;
+                        return false;	
+		}
+                if (cardNumber.length !== 16) {
+			document.getElementById('Message3').innerHTML = 'Please Enter valid Card Code.';
+			cvCodeValid = false;
+			return false;
+                    }
+		if (cvCode === '') {
+			document.getElementById('Message4').innerHTML = 'Please fill the cvcode field';
+			cvCodeValid = false;
+			return false;
+		}
+		if (cvCode.length !== 3) {
+			document.getElementById('Message4').innerHTML = 'Please Enter valid CV Code.';
+			cvCodeValid = false;
+			return false;
+		}
+
+		if(emailValid && cardHolderNameValid && cardNumberValid && cvCodeValid && amountValid) {
+			window.location.href="success.html";
+		}
+	});
+
+
+</script>
+
+
+             
+    </body>
+</html>

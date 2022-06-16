@@ -1,0 +1,76 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 18, 2021, 8:25:53 PM
+    Author     : Radha
+*/
+
+.form-group{
+    width: 350px;
+    padding-left: 10px;
+}
+
+.row_style{
+    margin-top: 15px;
+ 
+}
+
+
+.container{
+    padding-left: 300px;
+    padding-right: 400px;
+    padding-top: 150px;
+    
+}
+
+.panel-default{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-color: blueviolet;
+    height:320px;
+    width:350px;
+}
+
+.panel-heading
+{
+    padding-left: 25px;
+    padding-right: 50px;
+      
+}
+
+.form-group{
+    padding-left: 10px;
+    padding-right: 80px;
+    font-size: 14px;
+   
+}
+.form-control{
+    padding-left: 5px;
+    padding-right: 10px;
+      
+}
+
+.row_style {
+    padding-left: 100px;
+    padding-right: 50px;
+}
+.panel {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.btn-primary {
+    background-color: blueviolet; 
+    border-color: blueviolet;
+    color:#ffffff;
+    font-size: 18px;
+    width:83.33%;
+}
+
+.backimg2{
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT63sEfq0p4qDOzBGepRnLVv1oh8AoWhyeFxgurAs4W9AjT7KdsHS-Nq5YkAvEQdcVhjxE&usqp=CAU) ;
+    height:700px;
+}

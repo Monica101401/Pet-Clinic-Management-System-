@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>UPI</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <!--jQuery library--> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Latest compiled and minified JavaScript--> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+        <link rel="stylesheet"  href="Upi.css">
+    </head>
+       
+    <body>
+        <div class="backimg2">
+        <div class="container">
+            <div class="row row_style">
+                <div class="col-xs-6" >
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <h4><p style=" color: blueviolet;"><b>UPI PAYMENT</b></p></h4>
+                        </div>
+                         
+                            <form>
+                            
+                                <div class="form-group" >
+                                
+                                    <label>Amount:</label>
+                                    <input type="text" class="form-control input-lg"  name="Amount" placeholder="Amount"><br>
+                                    
+                                    <label>UPI id:</label>
+                                    <input type="text" class="form-control input-lg" name="upi" id="upi"  placeholder="Upi" value="">
+                                    <span id="Message" class="text-danger font-weight-bold"></span><br><br>
+                                    
+                                    <input id="submit1" type="Submit" value="Submit" class="btn btn-primary "><br><br>
+                                
+                                </div>
+                            </form>      
+                            
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+        <script src="myscript.js">
+         </script> 
+         <script>
+             $('#submit1').click((event) => {
+                event.preventDefault();
+                
+                const upi = document.getElementById('upi').value;
+                
+                let upiValid = true; 
+                
+                if(upi === ''){
+                   document.getElementById('Message').innerHTML='Please enter Upi id';
+                   upiValid = false;
+                    return false;
+                }
+                if(upi){
+                    window.location.href='success.html';
+                }
+             });
+         </script>
+    </body>
+</html>
